@@ -47,7 +47,7 @@ export default function Logo({
             </span>
             <span className={cn(
               isVertical ? "text-3xl md:text-5xl" : "text-xl md:text-2xl",
-              "font-black tracking-tighter text-[#00A3FF] ml-1 md:ml-2 leading-none uppercase"
+              "font-black tracking-tighter text-[#2563eb] ml-1 md:ml-2 leading-none uppercase"
             )}>
               Duct
             </span>
