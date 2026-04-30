@@ -55,7 +55,7 @@ export default function AdminLogin() {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 className="w-full pl-12 pr-4 py-4 rounded-2xl bg-slate-50 border border-slate-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:bg-white transition-all"
-                placeholder="admin@aircarepro.com"
+                placeholder="admin@apexductcleaning.com"
               />
             </div>
           </div>

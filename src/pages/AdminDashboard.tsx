@@ -251,7 +251,7 @@ function DashboardOverview({ showConfirm }: { showConfirm: (title: string, messa
               } else if (page === 'about') {
                 content = { story: { title: 'Our Mission', description1: 'Dedicated to pure air.', image: 'https://picsum.photos/seed/about/800/600' } };
               } else if (page === 'contact') {
-                content = { info: { title: 'Get in Touch', phone: '(800) 555-0199', email: 'info@aircarepro.com', address: '123 Air Way, Houston, TX' } };
+                content = { info: { title: 'Get in Touch', phone: '(800) 555-0199', email: 'info@apexductcleaning.com', address: '123 Air Way, Houston, TX' } };
               }
               await updateDoc(doc(db, 'page_content', page), content).catch(async () => {
                 const { setDoc } = await import('firebase/firestore');
@@ -1522,7 +1522,7 @@ function PageContentManager({ showConfirm }: { showConfirm: (title: string, mess
           description: 'Have questions about our services or need to schedule an inspection? Our team is here to help you breathe easier.',
           address: '123 Air Quality Way, Suite 100, Houston, TX 77001',
           phone: '(800) 555-0199',
-          email: 'hello@aircarepro.com',
+          email: 'info@apexductcleaning.com',
           hours: 'Mon-Fri: 8am - 6pm, Sat: 9am - 2pm'
         }
       };
@@ -1996,7 +1996,7 @@ function SettingsManager() {
         setSettings({
           contact: {
             phone: '(800) 555-0199',
-            email: 'info@aircarepro.com',
+            email: 'info@apexductcleaning.com',
             address: '123 Clean Air Way, Suite 100, Houston, TX 77001'
           },
           social: {

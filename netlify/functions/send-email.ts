@@ -17,12 +17,12 @@ export const handler = async (event: any) => {
   const resend = new Resend(apiKey);
   const { name, email, phone, service, message } = JSON.parse(event.body);
 
-  console.log('Sending email lead for:', name, 'to:', 'munibmmlm@gmail.com');
+  console.log('Sending email lead for:', name, 'to:', 'info@apexductcleaning.com');
 
   try {
     const data = await resend.emails.send({
       from: 'Apex Duct Cleaning <leads@Apexductcleaning.com>',
-      to: ['munibmmlm@gmail.com', 'tradingfriends56@gmail.com'],
+      to: ['info@apexductcleaning.com'],
       subject: `New Lead: ${name} - ${service}`,
       html: `
         <h1>New Lead Details</h1>
