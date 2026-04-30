@@ -5,7 +5,18 @@ export default function ScrollToTop() {
   const { pathname } = useLocation();
 
   useEffect(() => {
-    window.scrollTo(0, 0);
+    // We use requestAnimationFrame to ensure the scroll happens after the new page 
+    // content has been added to the DOM and is ready to be painted.
+    const scroll = () => {
+      window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: 'instant'
+      });
+    };
+
+    const handle = requestAnimationFrame(scroll);
+    return () => cancelAnimationFrame(handle);
   }, [pathname]);
 
   return null;
