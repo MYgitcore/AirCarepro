@@ -40,14 +40,14 @@ export default function Logo({
           <div className="flex items-center">
             <span className={cn(
               isVertical ? "text-3xl md:text-5xl" : "text-xl md:text-2xl",
-              "font-black tracking-tighter leading-none uppercase",
+              "font-black tracking-tighter leading-none uppercase drop-shadow-sm",
               isFooter ? "text-white drop-shadow-[0_0_2px_rgba(255,255,255,0.8)]" : "text-[#0f3b5e]"
             )}>
               Apex
             </span>
             <span className={cn(
               isVertical ? "text-3xl md:text-5xl" : "text-xl md:text-2xl",
-              "font-black tracking-tighter text-[#2563eb] ml-1 md:ml-2 leading-none uppercase"
+              "font-black tracking-tighter text-[#2563eb] ml-1 md:ml-2 leading-none uppercase drop-shadow-sm"
             )}>
               Duct
             </span>

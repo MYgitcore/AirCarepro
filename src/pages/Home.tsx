@@ -146,7 +146,8 @@ export default function Home() {
     // Fetch page content
     const unsubContent = onSnapshot(doc(db, 'page_content', 'homepage'), (docSnap) => {
       if (docSnap.exists()) {
-        setPageContent(docSnap.data());
+        const data = docSnap.data();
+        setPageContent(data);
       }
       setLoading(false);
     }, (error) => {
@@ -161,11 +162,16 @@ export default function Home() {
     };
   }, []);
 
-  const heroContent = pageContent?.hero || {
+  const rawHero = pageContent?.hero || {
     badge: 'Certified HVAC Professionals',
-    title: 'Cleaner Air, Healthier Home With Apex Duct Cleaning',
-    description: 'Expert air duct cleaning and clinical-grade HVAC restoration for Houston homes and businesses. Engineering a healthier environment for your family.',
+    title: 'Breathe Cleaner Air with ApexCare Pro',
+    description: 'Professional air duct cleaning and HVAC restoration services for homes and businesses. We improve your health and save you money.',
     image: 'https://q3zyn4woatazi.ok.kimi.link/images/hero-technician.jpg'
+  };
+
+  const heroContent = {
+    ...rawHero,
+    title: rawHero.title?.replace('AirCare Pro', 'ApexCare Pro') || 'Breathe Cleaner Air with ApexCare Pro'
   };
 
   const whyChooseUsContent = pageContent?.whyChooseUs || [
