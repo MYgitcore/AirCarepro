@@ -117,10 +117,21 @@ export default function Contact() {
     );
   }
 
+  const contactInfo = {
+    ...(content?.info || {
+      title: 'Get in Touch',
+      description: 'Have questions about our services or need to schedule an inspection? Our team is here to help you breathe easier.',
+      phone: '888-850-5817',
+      email: 'info@apexductcleaning.com',
+      address: '123 Air Quality Way, Suite 100, Houston, TX 77001'
+    }),
+    phone: '888-850-5817'
+  };
+
   const contactItems = [
-    { icon: Phone, label: 'Call Us', value: content.info?.phone, href: `tel:${content.info?.phone?.replace(/\D/g, '')}`, color: 'bg-blue-100 text-blue-600' },
-    { icon: Mail, label: 'Email Us', value: content.info?.email, href: `mailto:${content.info?.email}`, color: 'bg-green-100 text-green-600' },
-    { icon: MapPin, label: 'Visit Us', value: content.info?.address, color: 'bg-orange-100 text-orange-600' },
+    { icon: Phone, label: 'Call Us', value: contactInfo.phone, href: `tel:${contactInfo.phone.replace(/\D/g, '')}`, color: 'bg-blue-100 text-blue-600' },
+    { icon: Mail, label: 'Email Us', value: contactInfo.email, href: `mailto:${contactInfo.email}`, color: 'bg-green-100 text-green-600' },
+    { icon: MapPin, label: 'Visit Us', value: contactInfo.address, color: 'bg-orange-100 text-orange-600' },
   ];
 
   return (
@@ -141,7 +152,7 @@ export default function Contact() {
             transition={{ delay: 0.1 }}
             className="text-4xl md:text-6xl font-bold text-slate-900 tracking-tight mt-4"
           >
-            {content.info?.title}
+            {contactInfo.title}
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -149,7 +160,7 @@ export default function Contact() {
             transition={{ delay: 0.2 }}
             className="text-xl text-slate-600 mt-6 leading-relaxed"
           >
-            {content.info?.description}
+            {contactInfo.description}
           </motion.p>
         </div>
 
@@ -325,7 +336,7 @@ export default function Contact() {
                   Our certified technicians are ready to help you with all your HVAC needs.
                 </p>
                 <a 
-                  href={`tel:${content.info?.phone?.replace(/\D/g, '')}`}
+                  href={`tel:${contactInfo.phone.replace(/\D/g, '')}`}
                   className="mt-6 bg-white text-blue-600 px-6 py-2 rounded-full font-bold text-sm hover:bg-blue-50 transition-all shadow-lg"
                 >
                   Call Now

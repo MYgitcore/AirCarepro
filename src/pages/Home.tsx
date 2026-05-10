@@ -224,10 +224,13 @@ export default function Home() {
     { label: 'Average Rating', value: '4.9/5' },
   ];
 
-  const ctaContent = pageContent?.cta || {
-    title: 'Ready for a Healthier Home Environment?',
-    description: 'Contact us today for a free inspection and quote. Our experts are ready to help you breathe easier.',
-    phone: '(800) 555-0199'
+  const ctaContent = {
+    ...(pageContent?.cta || {
+      title: 'Ready for a Healthier Home Environment?',
+      description: 'Contact us today for a free inspection and quote. Our experts are ready to help you breathe easier.',
+      phone: '888-850-5817'
+    }),
+    phone: '888-850-5817'
   };
 
   const iconMap: any = {

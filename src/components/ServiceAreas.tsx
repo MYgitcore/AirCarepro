@@ -146,7 +146,7 @@ export default function ServiceAreas() {
                           <span className="font-bold text-xl">Great! We serve {selectedCity}.</span>
                         </div>
                         <p className="text-green-800 leading-relaxed">
-                          Call <a href="tel:+18588464843" className="font-bold underline">+1 858 8464843</a> or fill the contact form to book.
+                          Call <a href="tel:+18888505817" className="font-bold underline">888-850-5817</a> or fill the contact form to book.
                         </p>
                       </div>
                     ) : (
@@ -156,7 +156,7 @@ export default function ServiceAreas() {
                           <span className="font-bold text-xl">Confirm Service Area</span>
                         </div>
                         <p className="text-blue-800 leading-relaxed">
-                          Please call us at <a href="tel:+18588464843" className="font-bold underline">+1 858 8464843</a> to confirm service in your area.
+                          Please call us at <a href="tel:+18888505817" className="font-bold underline">888-850-5817</a> to confirm service in your area.
                         </p>
                       </div>
                     )}

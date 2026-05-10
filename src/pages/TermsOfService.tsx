@@ -32,7 +32,7 @@ export default function TermsOfService() {
         <>
           If you have any questions about these Terms of Service, please contact us at{" "}
           <a href="mailto:info@apexductcleaning.com" className="text-[#0f3b5e] font-bold hover:underline transition-all">info@apexductcleaning.com</a> or{" "}
-          <a href="tel:+18005550199" className="text-[#0f3b5e] font-bold hover:underline transition-all">(800) 555-0199</a>.
+          <a href="tel:+18888505817" className="text-[#0f3b5e] font-bold hover:underline transition-all">888-850-5817</a>.
         </>
       )
     }

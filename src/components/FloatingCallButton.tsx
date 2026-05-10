@@ -4,7 +4,7 @@ import { motion } from 'motion/react';
 export default function FloatingCallButton() {
   return (
     <motion.a
-      href="tel:+18588464843"
+      href="tel:+18888505817"
       initial={{ scale: 0, opacity: 0 }}
       animate={{ scale: 1, opacity: 1 }}
       whileHover={{ scale: 1.1, boxShadow: "0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1)" }}
