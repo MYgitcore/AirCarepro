@@ -16,6 +16,12 @@ export default function ScrollToTop() {
     };
 
     const handle = requestAnimationFrame(scroll);
+
+    // Trigger Meta Pixel PageView tracking on page/route transition
+    if (typeof (window as any).fbq === 'function') {
+      (window as any).fbq('track', 'PageView');
+    }
+
     return () => cancelAnimationFrame(handle);
   }, [pathname]);
 
